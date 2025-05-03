@@ -52,6 +52,60 @@
     }
 
     /* Hamburger e menu mobile */
+    .hamburger {<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FrameX - Vendita Hardware</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Navbar desktop */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 2px solid black;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background: black;
+      color: white;
+    }
+
+    /* Hamburger e menu mobile */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -109,7 +163,6 @@
       margin: auto;
     }
 
-    /* Sezione Chi siamo */
     .about-section {
       padding: 60px 20px;
       background-color: #f5f5f5;
@@ -122,10 +175,9 @@
     }
 
     .about-section p {
+      font-size: 1.2em;
       max-width: 700px;
       margin: auto;
-      font-size: 1.1em;
-      line-height: 1.6;
     }
 
     /* Responsive */
@@ -140,6 +192,10 @@
 
       .mobile-menu {
         display: flex;
+      }
+
+      .spec-section {
+        flex-direction: column;
       }
     }
   </style>
@@ -179,12 +235,18 @@
     <p>Scopri il nostro hardware selezionato con cura per i veri appassionati di PC. Qualità, prestazioni e stile in un solo posto.</p>
   </header>
 
-  <section class="about-section">
+  <div class="about-section">
     <h2>Chi siamo</h2>
     <p>
-      FrameX nasce dalla passione per l’hardware e la tecnologia. Siamo un team giovane e motivato che seleziona solo i migliori componenti per garantire prestazioni, affidabilità e un look da urlo ai tuoi PC. Che tu sia un gamer, uno studente o un professionista, qui troverai qualità e supporto dedicato.
+      FrameX nasce dall'esperienza e dalla passione di un team giovane ma competente, specializzato nella selezione e nella distribuzione di componenti hardware di alta qualità. Il nostro obiettivo è offrire a ogni cliente, dal gamer appassionato al tecnico informatico, l'accesso ai migliori prodotti sul mercato a prezzi competitivi.
     </p>
-  </section>
+    <p>
+      Trattiamo solo componenti originali e affidabili: CPU, schede madri, RAM, SSD, GPU, alimentatori e sistemi di raffreddamento, scelti per garantire prestazioni elevate, stabilità e compatibilità. Ogni prodotto è selezionato con attenzione, per assicurare il massimo rapporto qualità/prezzo.
+    </p>
+    <p>
+      Con FrameX, l’assemblaggio del tuo PC parte da una base solida: componenti affidabili, informazioni trasparenti e supporto dedicato. La nostra missione è semplificare l’acquisto di hardware, offrendo un servizio sicuro, aggiornato e orientato alle reali esigenze dell’utente.
+    </p>
+  </div>
 
   <script>
     function toggleMenu() {
