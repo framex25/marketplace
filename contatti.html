@@ -18,17 +18,41 @@
     }
 
     nav {
+      display: flex;<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contatti - FrameX</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
       border-bottom: 1px solid #ccc;
-      background-color: #fff;
+      background-color: #000;
     }
 
     .logo {
       font-size: 1.5em;
       font-weight: bold;
+      color: white;
     }
 
     .nav-buttons {
@@ -38,16 +62,17 @@
 
     .nav-buttons button {
       background: none;
-      border: 2px solid black;
+      border: 2px solid white;
       padding: 8px 16px;
       cursor: pointer;
       font-weight: bold;
+      color: white;
       transition: background 0.3s;
     }
 
     .nav-buttons button:hover {
-      background: black;
-      color: white;
+      background: white;
+      color: black;
     }
 
     .hamburger {
@@ -60,7 +85,7 @@
     .hamburger div {
       width: 25px;
       height: 3px;
-      background-color: black;
+      background-color: white;
     }
 
     .mobile-menu {
@@ -70,7 +95,7 @@
       left: -100%;
       width: 200px;
       height: 100%;
-      background-color: white;
+      background-color: #000;
       padding: 60px 20px;
       box-shadow: 2px 0 5px rgba(0,0,0,0.2);
       flex-direction: column;
@@ -80,10 +105,11 @@
 
     .mobile-menu button {
       background: none;
-      border: 2px solid black;
+      border: 2px solid white;
       padding: 10px;
       font-weight: bold;
       cursor: pointer;
+      color: white;
       width: 100%;
     }
 
@@ -94,11 +120,14 @@
     .contacts-section {
       padding: 60px 20px;
       text-align: center;
+      background-color: #1a1a1a;
+      flex: 1;
     }
 
     .contacts-section h2 {
       font-size: 2em;
       margin-bottom: 40px;
+      color: white;
     }
 
     .contact-item {
@@ -107,13 +136,20 @@
     }
 
     .contact-item a {
-      color: black;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
     .contact-item a:hover {
       text-decoration: underline;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      color: white;
     }
 
     @media (max-width: 768px) {
@@ -175,9 +211,13 @@
       📸 Instagram: <a href="https://instagram.com/framexofficial/" target="_blank">@framexofficial</a>
     </div>
     <div class="contact-item">
-      🎵 TikTok: <a href="https://tiktok.com/@framex25.04" target="_blank">@framex25.04</a>
+      🎵 TikTok: <a href="https://tiktok.com/@framex25.04" target="_blank">@framex25.05</a>
     </div>
   </section>
+
+  <footer style="text-align: center; padding: 30px 20px; background-color: #000; border-top: 1px solid #444;">
+    <p style="color: #888;">&copy; 2025 FrameX. Tutti i diritti riservati.</p>
+  </footer>
 
   <script>
     function toggleMenu() {
