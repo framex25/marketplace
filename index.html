@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FrameX - Componenti PC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FrameX - Vendita Hardware</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #000;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ccc;
       background-color: #fff;
-      border-bottom: 1px solid #ddd;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 1.5em;
       font-weight: bold;
     }
 
     .nav-buttons {
       display: flex;
-      gap: 15px;
+      gap: 20px;
     }
 
-    .nav-buttons a button {
-      padding: 8px 16px;
-      border: 2px solid black;
+    .nav-buttons button {
       background: none;
+      border: 2px solid black;
+      padding: 8px 16px;
       cursor: pointer;
       font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .nav-buttons a button:hover {
-      background-color: black;
+    .nav-buttons button:hover {
+      background: black;
       color: white;
     }
 
@@ -46,28 +54,37 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 5px;
+      gap: 4px;
     }
 
     .hamburger div {
       width: 25px;
       height: 3px;
-      background: black;
+      background-color: black;
     }
 
     .mobile-menu {
       display: none;
-      flex-direction: column;
-      gap: 15px;
       position: fixed;
       top: 0;
       left: -100%;
       width: 200px;
       height: 100%;
-      background: #fff;
+      background-color: #fff;
       padding: 60px 20px;
-      transition: left 0.3s ease;
-      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+      transition: left 0.3s;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu button {
+      background: none;
+      border: 2px solid black;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
     }
 
     .mobile-menu.open {
@@ -76,24 +93,35 @@
 
     header {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
     }
 
     .about-section {
+      padding: 60px 20px;
       background-color: #f5f5f5;
-      padding: 40px 20px;
       text-align: center;
     }
 
     .about-section h2 {
-      font-size: 28px;
+      font-size: 2em;
       margin-bottom: 20px;
     }
 
     .about-section p {
       max-width: 700px;
       margin: auto;
-      font-size: 18px;
+      font-size: 1.1em;
       line-height: 1.6;
     }
 
@@ -117,9 +145,13 @@
   <nav>
     <div class="logo">FrameX</div>
     <div class="nav-buttons">
-      <a href="index.html"><button>Home</button></a>
-      <a href="prodotti.html"><button>Prodotti</button></a>
-      <a href="#"><button>Contatti</button></a>
+      <a href="index.html">
+        <button>Home</button>
+      </a>
+      <a href="prodotti.html">
+        <button>Prodotti</button>
+      </a>
+      <button>Contatti</button>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
@@ -129,23 +161,24 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"><button>Home</button></a>
-    <a href="prodotti.html"><button>Prodotti</button></a>
-    <a href="#"><button>Contatti</button></a>
+    <a href="index.html">
+      <button>Home</button>
+    </a>
+    <a href="prodotti.html">
+      <button>Prodotti</button>
+    </a>
+    <button>Contatti</button>
   </div>
 
   <header>
     <h1>Benvenuto su FrameX</h1>
-    <p>Scopri i migliori componenti hardware per PC selezionati con attenzione, perfetti per ogni tipo di configurazione.</p>
+    <p>Scopri il nostro hardware selezionato con cura per i veri appassionati di PC. Qualità, prestazioni e stile in un solo posto.</p>
   </header>
 
   <section class="about-section">
     <h2>Chi siamo</h2>
     <p>
-      FrameX è un progetto nato dalla passione per l'hardware e la tecnologia. Ci occupiamo della vendita di componenti per PC di alta qualità, selezionando accuratamente i prodotti per garantire il miglior rapporto tra prestazioni e prezzo.
-    </p>
-    <p>
-      Offriamo un catalogo in continua evoluzione con CPU, GPU, RAM, SSD, schede madri, alimentatori e sistemi di raffreddamento, pensati per chi vuole assemblare il proprio PC in modo consapevole e performante. Il nostro obiettivo è diventare un punto di riferimento per appassionati e professionisti che cercano affidabilità, supporto e prodotti sempre aggiornati.
+      FrameX è un progetto nato dalla passione per l’informatica e l’hardware di ultima generazione. Ci occupiamo della vendita di componenti selezionati per PC, puntando su qualità, compatibilità e prestazioni elevate. Dalle schede video alle RAM, dai dissipatori agli SSD, offriamo solo prodotti testati, affidabili e pensati per soddisfare gamer, professionisti e appassionati del settore. Il nostro obiettivo è aiutarti a scegliere le soluzioni migliori per costruire o potenziare la tua macchina con attenzione al dettaglio e al rapporto qualità-prezzo.
     </p>
   </section>
 
