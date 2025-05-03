@@ -13,8 +13,8 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: white;
-      color: black;
+      background-color: #1a1a1a; /* Grigio scuro */
+      color: white;
     }
 
     nav {
@@ -22,8 +22,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      border-bottom: 1px solid #ccc;
-      background-color: #fff;
+      border-bottom: 1px solid #333;
+      background-color: black;
     }
 
     .logo {
@@ -38,16 +38,17 @@
 
     .nav-buttons button {
       background: none;
-      border: 2px solid black;
+      color: white;
+      border: 2px solid white;
       padding: 8px 16px;
       cursor: pointer;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
 
     .nav-buttons button:hover {
-      background: black;
-      color: white;
+      background: white;
+      color: black;
     }
 
     .hamburger {
@@ -60,7 +61,7 @@
     .hamburger div {
       width: 25px;
       height: 3px;
-      background-color: black;
+      background-color: white;
     }
 
     .mobile-menu {
@@ -70,7 +71,7 @@
       left: -100%;
       width: 200px;
       height: 100%;
-      background-color: white;
+      background-color: black;
       padding: 60px 20px;
       box-shadow: 2px 0 5px rgba(0,0,0,0.2);
       flex-direction: column;
@@ -80,7 +81,8 @@
 
     .mobile-menu button {
       background: none;
-      border: 2px solid black;
+      border: 2px solid white;
+      color: white;
       padding: 10px;
       font-weight: bold;
       cursor: pointer;
@@ -110,7 +112,7 @@
       max-width: 100%;
       height: auto;
       border-radius: 8px;
-      border: 3px solid black;
+      border: 3px solid white;
     }
 
     .product-details {
@@ -140,7 +142,7 @@
     }
 
     .tray-note {
-      color: red;
+      color: #ff6b6b;
       font-weight: bold;
     }
 
@@ -148,7 +150,7 @@
       margin-top: 40px;
       text-align: center;
       padding: 30px;
-      background-color: #f2f2f2;
+      background-color: black;
     }
 
     .contact-section h3 {
@@ -158,7 +160,7 @@
     .contact-section a {
       text-decoration: none;
       font-weight: bold;
-      color: black;
+      color: white;
     }
 
     .contact-section a:hover {
@@ -209,7 +211,7 @@
 
   <div class="product-container">
     <div class="product-image">
-      <img src="https://cdn.custompc.com/wp-content/sites/custompc/2023/02/amd-ryzen-7-7700-01.jpg" alt="Ryzen 7 7700">
+      <img src="ryzen7700.png" alt="Ryzen 7 7700">
     </div>
     <div class="product-details">
       <h2>AMD Ryzen 7 7700</h2>
@@ -231,16 +233,20 @@
   <div class="contact-section">
     <h3>Vuoi acquistare o hai bisogno di info?</h3>
     <p>Contattaci su: 
-        <p>
-            Email: 
-            <a href="mailto:framex.tech25@gmail.com">framex.tech25@gmail.com</a> |
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=framex.tech25@gmail.com" target="_blank">Scrivici via Gmail</a>
-        </p>
+      <p>
+        Email: 
+        <a href="mailto:framex.tech25@gmail.com">framex.tech25@gmail.com</a> |
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=framex.tech25@gmail.com" target="_blank">Scrivici via Gmail</a>
+      </p>
       <a href="https://instagram.com/framexofficial" target="_blank">📷 Instagram</a> o 
       <a href="https://www.tiktok.com/@framex25.04" target="_blank">🎵 TikTok</a>
     </p>
   </div>
 
+  <footer style="text-align: center; padding: 30px 20px; background-color: #000; border-top: 1px solid #444;">
+    <p style="color: #888;">&copy; 2025 FrameX. Tutti i diritti riservati.</p>
+  </footer>
+  
   <script>
     function toggleMenu() {
       const menu = document.getElementById("mobileMenu");
