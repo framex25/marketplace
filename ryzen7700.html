@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ryzen 7 7700 - FrameX</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 2px solid black;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background: black;
+      color: white;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 200px;
+      height: 100%;
+      background-color: white;
+      padding: 60px 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+      flex-direction: column;
+      gap: 20px;
+      transition: left 0.3s;
+    }
+
+    .mobile-menu button {
+      background: none;
+      border: 2px solid black;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .mobile-menu.open {
+      left: 0;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 3px solid black;
+    }
+
+    .product-details {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-details h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .product-details ul {
+      margin-bottom: 20px;
+      line-height: 1.8em;
+    }
+
+    .product-details ul li {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .price {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .tray-note {
+      color: red;
+      font-weight: bold;
+    }
+
+    .contact-section {
+      margin-top: 40px;
+      text-align: center;
+      padding: 30px;
+      background-color: #f2f2f2;
+    }
+
+    .contact-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-section a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-buttons {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+
+      .product-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">FrameX</div>
+    <div class="nav-buttons">
+      <a href="index.html"><button>Home</button></a>
+      <a href="prodotti.html"><button>Prodotti</button></a>
+      <a href="contatti.html"><button>Contatti</button></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"><button>Home</button></a>
+    <a href="prodotti.html"><button>Prodotti</button></a>
+    <a href="contatti.html"><button>Contatti</button></a>
+  </div>
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="https://cdn.custompc.com/wp-content/sites/custompc/2023/02/amd-ryzen-7-7700-01.jpg" alt="Ryzen 7 7700">
+    </div>
+    <div class="product-details">
+      <h2>AMD Ryzen 7 7700</h2>
+      <ul>
+        <li>8 core / 16 thread</li>
+        <li>Frequenza base: 3.8 GHz</li>
+        <li>Boost fino a 5.3 GHz</li>
+        <li>Socket AM5</li>
+        <li>Processo produttivo a 5nm</li>
+        <li>Cache totale: 40 MB</li>
+        <li>Grafica integrata Radeon</li>
+        <li>TDP: 65W</li>
+      </ul>
+      <div class="price">Prezzo: 230€</div>
+      <div class="tray-note">Versione Tray: solo processore, senza dissipatore</div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <h3>Vuoi acquistare o hai bisogno di info?</h3>
+    <p>Contattaci su: 
+        <p>
+            Email: 
+            <a href="mailto:framex.tech25@gmail.com">framex.tech25@gmail.com</a> |
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=framex.tech25@gmail.com" target="_blank">Scrivici via Gmail</a>
+        </p>
+      <a href="https://instagram.com/framexofficial" target="_blank">📷 Instagram</a> o 
+      <a href="https://www.tiktok.com/@framex25.04" target="_blank">🎵 TikTok</a>
+    </p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
