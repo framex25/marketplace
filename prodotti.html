@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FrameX - Prodotti</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 2px solid black;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background: black;
+      color: white;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 200px;
+      height: 100%;
+      background-color: #fff;
+      padding: 60px 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+      transition: left 0.3s;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu.open {
+      left: 0;
+    }
+
+    .mobile-menu button {
+      background: none;
+      border: 2px solid black;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .product-card {
+      border: 2px solid #000;
+      border-radius: 12px;
+      padding: 16px;
+      background-color: #f9f9f9;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #000;
+      margin-bottom: 12px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    .product-card p {
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background: none;
+      border: 2px solid black;
+      padding: 8px 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .product-card button:hover {
+      background: black;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .nav-buttons {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">FrameX</div>
+    <div class="nav-buttons">
+        <a href = "home.html">
+            <button>Home</button>
+          </a>
+          <a href = "prodotti.html">
+            <button>Prodotti</button>
+          </a>
+      <button>Contatti</button>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href = "home.html">
+        <button>Home</button>
+      </a>
+      <a href = "prodotti.html">
+        <button>Prodotti</button>
+      </a>
+    <button>Contatti</button>
+  </div>
+
+  <header>
+    <h1>I nostri prodotti</h1>
+    <p>Componenti di alta qualità per ogni esigenza. Scegli il meglio per il tuo setup.</p>
+  </header>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61cND7hkrjL._AC_SX679_.jpg" alt="Ryzen 5 5600">
+      <h3>Ryzen 5 5600</h3>
+      <p>6 Core / 12 Thread, 3.5GHz, AM4</p>
+      <button>Aggiungi al carrello</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71ms3fXVvWL._AC_SX679_.jpg" alt="Asus Dual RX 6600">
+      <h3>Asus Dual RX 6600</h3>
+      <p>8GB GDDR6, PCIe 4.0, Dual Fan</p>
+      <button>Aggiungi al carrello</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71h7n8m8shL._AC_SY879_.jpg" alt="RAM Corsair Vengeance 16GB">
+      <h3>RAM Corsair Vengeance 16GB</h3>
+      <p>DDR4 3600MHz, CL18, 1x16GB</p>
+      <button>Aggiungi al carrello</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61M1SM2s6tL._AC_SY879_.jpg" alt="SSD Crucial P3 Plus 1TB">
+      <h3>SSD Crucial P3 Plus 1TB</h3>
+      <p>NVMe Gen4, 5000 MB/s</p>
+      <button>Aggiungi al carrello</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71P3qNZTLcL._AC_SY879_.jpg" alt="MSI B550 Gaming Gen3">
+      <h3>MSI B550 Gaming Gen3</h3>
+      <p>Socket AM4, DDR4, PCIe 3.0</p>
+      <button>Aggiungi al carrello</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71WnKxXbjeL._AC_SY879_.jpg" alt="Alimentatore Corsair 80+ Gold">
+      <h3>Corsair 650W 80+ Gold</h3>
+      <p>Modulare, certificato Gold</p>
+      <button>Aggiungi al carrello</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
